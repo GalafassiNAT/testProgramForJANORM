@@ -1,0 +1,109 @@
+{
+  "Source": {
+    "DatabaseUrl": "env(DATA_SOURCE)",
+    "Host": "sqlite"
+  },
+  "Entities": [
+    {
+      "TableName": "Car",
+      "Properties": [
+        {
+          "Name": "Id",
+          "Type": "Int32",
+          "IsPrimaryKey": true,
+          "IsNullable": true,
+          "GenerationMethod": 0
+        },
+        {
+          "Name": "Name",
+          "Type": "String",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Year",
+          "Type": "Int32",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Doors",
+          "Type": "Int32",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Brand",
+          "Type": "String",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Model",
+          "Type": "String",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Price",
+          "Type": "Single",
+          "IsPrimaryKey": false,
+          "IsNullable": true,
+          "GenerationMethod": 2
+        }
+      ]
+    },
+    {
+      "TableName": "Test",
+      "Properties": [
+        {
+          "Name": "Id",
+          "Type": "Guid",
+          "IsPrimaryKey": true,
+          "IsNullable": false,
+          "GenerationMethod": 1
+        },
+        {
+          "Name": "Name",
+          "Type": "String",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Description",
+          "Type": "String",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Age",
+          "Type": "Int32",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Height",
+          "Type": "Single",
+          "IsPrimaryKey": false,
+          "IsNullable": false,
+          "GenerationMethod": 2
+        },
+        {
+          "Name": "Weight",
+          "Type": "Single",
+          "IsPrimaryKey": false,
+          "IsNullable": true,
+          "GenerationMethod": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "janorm.client": {
+      "version": "0.0.18",
+      "commands": [
+        "janx"
+      ]
+    }
+  }
+}
