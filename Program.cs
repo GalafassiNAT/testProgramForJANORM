@@ -78,16 +78,16 @@ public class Program
         // Find all
 
         var allTests = await testRepository.FindAll();
-        foreach (var test in allTests)
-        {
-            Console.WriteLine("Test Id: " + test.Id);
-            Console.WriteLine("Test Name: " + test.Name);
-            Console.WriteLine("Test Age:" + test.Age);
-            Console.WriteLine("Test Description: " + test.Description);
-            Console.WriteLine("Test Height: " + test.Height);
-            Console.WriteLine("Test Weight: " + test.Weight);
-            Console.WriteLine();
-        }
+        // foreach (var test in allTests)
+        // {
+        //     Console.WriteLine("Test Id: " + test.Id);
+        //     Console.WriteLine("Test Name: " + test.Name);
+        //     Console.WriteLine("Test Age:" + test.Age);
+        //     Console.WriteLine("Test Description: " + test.Description);
+        //     Console.WriteLine("Test Height: " + test.Height);
+        //     Console.WriteLine("Test Weight: " + test.Weight);
+        //     Console.WriteLine();
+        // }
 
         // var allCars = await carRepository.FindAll();
         // foreach (var car in allCars)
@@ -139,6 +139,29 @@ public class Program
         // Console.WriteLine("Deleted Test: " + idT);
         // await carRepository.Delete(1);
         // Console.WriteLine("Deleted Car: " + 1);
+
+        // findOne
+
+        var condition = new Dictionary<string, object>
+        {
+            { "Name", "Name01" },
+
+        };
+
+        var test = await testRepository.FindOne(condition);
+        if (test != null)
+        {
+            Console.WriteLine("Found Test: " + test.Id);
+            Console.WriteLine("Found Test: " + test.Name);
+            Console.WriteLine("Found Test: " + test.Age);
+            Console.WriteLine("Found Test: " + test.Description);
+            Console.WriteLine("Found Test: " + test.Height);
+            Console.WriteLine("Found Test: " + test.Weight);
+        }
+        else
+        {
+            Console.WriteLine("Test not found");
+        }
     }
 
 }
